@@ -69,7 +69,7 @@ public class Client
 			}
 			
 			oos.writeObject(arrList);
-			//System.out.println("The complete ArrayList :::"+arrList);
+			System.out.println("The complete ArrayList :::"+arrList);
 			
 			System.out.println("Enter the desired file name that you want to downloaded from the list of the files available in the Server ::");
 			String fileNameToDownload = br.readLine();
@@ -115,7 +115,7 @@ public class Client
 				clientAsServerOOS.writeObject(fileNamedwld);
 				int readBytes=(int) clientAsServerOIS.readObject();
 				
-				//System.out.println("Number of bytes that have been transferred are ::"+readBytes);
+				System.out.println("Number of bytes that have been transferred are ::"+readBytes);
 				
 				byte[] b=new byte[readBytes];
 				clientAsServerOIS.readFully(b);
